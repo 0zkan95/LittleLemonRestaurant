@@ -1,0 +1,33 @@
+.logo {
+     height: 40px; /* Adjust the size as needed */ 
+     margin-right: 10px; /* Add some space between the logo and text */ 
+} 
+.navbar {
+     display: flex; 
+     justify-content: center; 
+     align-items: center; 
+     background-color: #fff; 
+     padding: 10px 20px; 
+} 
+.nav-logo {
+     display: flex; 
+     align-items: center; /* Center the logo and text vertically */ 
+     color: #fff; 
+     font-size: 1.5em; 
+     font-weight: bold; 
+} 
+.links {
+     list-style-type: none; 
+     display: flex; 
+     gap: 20px; 
+} 
+.links li {
+     display: inline; 
+} 
+.links a {
+     color: #fff; 
+     text-decoration: none; 
+} 
+.links a:hover {
+     text-decoration: underline; 
+}
