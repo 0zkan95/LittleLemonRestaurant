@@ -1,73 +1,117 @@
-.container{
-    margin: 0 auto;
-    width: 90vw;
-    height: 50vh;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+/* General Styles */
+.container {
+    display: grid; /* Use CSS Grid */
+    grid-template-columns: 1fr; /* Single-column layout by default */
+    grid-gap: 20px; /* Space between rows */
     padding: 20px;
+    background-color: #495e57;
+    border-top: 1px solid #ddd;
 }
 
-.logo{
-    display: flex;
-    flex-direction: column;
-}
-#logo1 {
-    width: 20vw;
-    height: 20vh;
+/* Logo */
+.logo {
+    text-align: center;
 }
 
+.logo img {
+    height: 30vh; /* Keep the large logo size */
+    max-width: 100%;
+}
+
+/* Doormat */
 .doormat {
-    width: 30vw;
-    height: 40vh;
     text-align: center;
 }
 
 .doormat ul {
     list-style: none;
-    padding: 5px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    gap: 5px;
+    padding: 0;
+    margin: 0;
 }
+
+.doormat ul li {
+    margin: 5px 0;
+}
+
 .doormat ul li a {
+    color: #fff;
     text-decoration: none;
-    color: #333;
     font-weight: bold;
 }
+
 .doormat ul li a:hover {
-    text-decoration: underline;
+    color: #333;
 }
 
-.contact{
-    text-align: left;
-    margin: 3px;
-    width: 30vw;
-    height: 40vh;
-    line-height: 1.5ch;
-}
-
-.social {
-    width: 30vw;
-    height: 40vh;
+/* Contact and Social */
+.contact, .social {
+    color: #fff;
     text-align: center;
 }
+
 .social-links {
     list-style: none;
-    padding: 0px;
+    padding: 0;
     display: flex;
     flex-direction: column;
     gap: 10px;
-    justify-content: center;
 }
 
 .social-links li a {
     text-decoration: none;
-    color: #333;
+    color: #fff;
     font-weight: bold;
 }
+
 .social-links li a:hover {
-    text-decoration: underline;
+    color: #333;
+}
+
+/* Responsive Design */
+
+/* Tablet View (max-width: 1024px) */
+@media (max-width: 1024px) {
+    .container {
+        grid-template-columns: 2fr; /* Single-column layout for rows */
+        grid-template-rows: auto auto auto; /* Explicitly define three rows */
+    }
+
+    .logo {
+        grid-column: 1 / 2; /* Spans the full width in its row */
+    }
+
+    .doormat {
+        grid-column: 2 / 2; /* Spans the full width in its row */
+    }
+
+    .contact, .social {
+        grid-template-columns: 1fr; /* Two columns for the third row */
+        display: grid;
+    }
+}
+
+/* Mobile View (max-width: 768px) */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr; /* Single-column layout for rows */
+        grid-template-rows: auto auto auto; /* Explicitly define three rows */
+    }
+    .logo img {
+        height: 50px; /* Adjust logo size for smaller screens */
+    }
+
+    .contact, .social {
+        text-align: center; /* Center-align content */
+    }
+}
+
+/* Small Mobile View (max-width: 480px) */
+@media (max-width: 480px) {
+    .logo img {
+        height: 40px; /* Further reduce logo size */
+    }
+
+    .contact {
+        max-width: 90%; /* Ensure contact content fits */
+    }
 }

@@ -1,13 +1,14 @@
 import React from "react";
 import '../styles/Footer.css';
-import logo1 from "../images/Logo .svg";
+import proxyimg from "../images/proxy-image.png";
+
 
 
 const Footer = () => {
     return (
         <div className="container">
             <div className="logo">
-                <img src={logo1} alt="logo1" id="logo1" />
+                <img src={proxyimg} alt="logo1"  id="logo1" />
             </div>
             <div className="doormat">
                 <h3>Doormat Navigation</h3>
@@ -23,17 +24,19 @@ const Footer = () => {
             <div className="contact">
                 <h3>Contact</h3>
                 <h4>Address:</h4>
-                <p>Lorem ipsum dolor sit amet consectetur.</p>
+                <h6>Little Lemon Restaurant
+                    123 Main Street
+                    Anytown, USA 12345</h6>
                 <h4>Phone:</h4>
-                <p>555111222</p>
+                <h6>555111222</h6>
                 <h4>Email:</h4>
-                <p>info@littlelemon.com</p>
+                <h6>info@littlelemon.com</h6>
             </div>
             <div className="social">
                 <h3>Social Media</h3>
                 <ul className="social-links">
                     <li><a href="#">Facebook</a></li>
-                    <li><a href="#">X</a></li>
+                    <li><a href="#">Linkedin</a></li>
                     <li><a href="#">Instagram</a></li>
                 </ul>
             </div>

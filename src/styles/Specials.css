@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.spe-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin-top: 13vh;
+  }
+  
+  .section1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    max-width: 950px;
+    margin-bottom: 20px;
+  }
+  
+  .section1 h2 {
+    justify-content: space-between;
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .section1 button {
+    font: bolder;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #f4ce14; /* Yellow */
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease-out;
+  }
+  
+  .section1 button:hover {
+    background-color: #495E57;
+    transform: translateY(-5px);
+  }
+  
+  /* Special Food Item Styles */
+  .section2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .food1 {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    width: 23vw;
+    text-align: center;
+  }
+  
+  .img {
+    height: 21vh;
+    width: 23vw;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  .food-img {
+    height: 21vh;
+    width: 23vw;
+    border-radius: 10px;
+  }
+
+  .heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .heading h4 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+  }
+  
+  .heading h5 {
+    font-size: 1.2rem;
+    color: red;
+  }
+  
+  .description p {
+    text-align: left;
+    font-size: 0.9rem;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .order {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .order button {
+    font: bolder;
+    padding: 5px 10px;
+    font-size: 1rem;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .order button:hover {
+    background-color: #f4ce14;
+  }
+  
+  .ikon {
+    height: 30px;
+  }
+  

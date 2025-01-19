@@ -1,0 +1,69 @@
+/* Testimonials.css */
+
+.tes-container {
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 10vh;
+}
+
+.tes-container h2 {
+    margin: 10vh 0vw;
+    font-size: 2rem; /* Adjust font size for better visual hierarchy */
+}
+
+.reviews {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allows items to wrap to the next line */
+}
+
+.review-box {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    max-width: 250px;
+    flex: 1 1 calc(33.33% - 40px); /* Adjusts width to be responsive */
+    margin: 10px;
+    text-align: left; /* Centers text within review box */
+}
+
+.review-center {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.img-box {
+    width: 80px;
+    height: 80px;
+    background-color: #ddd; /* Placeholder for image */
+    border-radius: 10px;
+}
+
+.review-box h4 {
+    margin-bottom: 5px;
+}
+
+.review-box p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.star {
+    height: 3vh;
+}
+  /* Responsive Design Initiatives */
+@media (max-width: 1024px) {
+    .review-box {
+      flex: 1 1 calc(50% - 40px); /* Two columns on tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .review-box {
+      flex: 1 1 calc(100% - 40px); /* One column on mobile */
+    }
+}

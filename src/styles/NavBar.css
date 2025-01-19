@@ -1,33 +1,39 @@
 .logo {
-     height: 40px; /* Adjust the size as needed */ 
-     margin-right: 10px; /* Add some space between the logo and text */ 
-} 
+     height: 40px; /* Adjust the size as needed */
+     margin-top: 1vh;
+     margin-right: 10px; /* Add some space between the logo and text */
+}
 .navbar {
-     display: flex; 
-     justify-content: center; 
-     align-items: center; 
-     background-color: #fff; 
-     padding: 10px 20px; 
-} 
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     background-color: #fff;
+     padding: 0px 20px;
+}
 .nav-logo {
-     display: flex; 
-     align-items: center; /* Center the logo and text vertically */ 
-     color: #fff; 
-     font-size: 1.5em; 
-     font-weight: bold; 
-} 
+     display: flex;
+     align-items: center; /* Center the logo and text vertically */
+     color: #fff;
+     font-size: 1.5em;
+}
 .links {
-     list-style-type: none; 
-     display: flex; 
-     gap: 20px; 
-} 
+     list-style-type: none;
+     display: flex;
+     gap: 20px;
+}
 .links li {
-     display: inline; 
-} 
+     display: inline;
+}
 .links a {
-     color: #fff; 
-     text-decoration: none; 
-} 
+     color: #000000;
+     text-decoration: none;
+     font: bolder;
+     padding: 0rem 1rem;
+}
 .links a:hover {
-     text-decoration: underline; 
+     border: none;
+     background-color: #f4ce14;
+     color: #fff;
+     border-radius: 30px;
+     padding: .5rem 1rem;
 }

@@ -1,0 +1,94 @@
+/* Header.css */
+
+.header-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    align-items: center;
+    padding: 20px;
+    background-color: #495f57; /* Background color corrected */
+    position: relative;
+}
+
+.left {
+    grid-column: 1 / 2; /* Left container in the first column */
+    text-align: left;
+    padding: 20px; /* Add padding for spacing */
+    width: 30vw;
+    margin-left: 10vw;
+}
+
+.left p {
+    width: 20vw;
+}
+
+.left h2, .left p {
+    margin: 0 0 10px; /* Adjust spacing as needed */
+}
+
+.left button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #f4ce14;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    box-shadow: 0 0 6px rgb(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease-out;
+}
+
+.left button:hover {
+    background-color: #f4ce14;
+    transform: translateY(-5px);
+  }
+
+  .right {
+    grid-column: 2 /2; /* Right container in the second column */
+    justify-content: center;
+    position: relative;
+}
+
+.header-img img {
+    position: absolute;
+    top: -14vh;
+    width: 20vw;
+    border-radius: 10px;
+}
+
+  /* Responsive Design */
+ @media (max-width: 1024px) {
+     .header-container {
+         grid-template-columns: 1fr; /* Single column layout for tablets */
+         text-align: center; /* Center text for smaller screens */
+      }
+      .left, .right {
+            padding: 10px; /* Adjust padding for smaller screens */
+      } .right { justify-content: center; /* Center the image */ }
+      .header-img img {
+         position: static;
+         width: 80%; /* Adjust image size for tablets */
+         margin-top: 20px; /* Adjust spacing */
+      }
+}
+@media (max-width: 768px) {
+    .left p {
+        width: 100%; /* Adjust width for mobile screens */
+    }
+    .header-img img {
+        width: 100%; /* Full width for mobile screens */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
+@media (max-width: 480px) {
+    .header-container {
+        padding: 10px; /* Adjust padding for mobile screens */
+    }
+    .left h1, .left h2, .left p {
+        font-size: 1rem; /* Adjust font size for mobile screens */
+    }
+    .left button {
+        width: 100%;
+        padding: 10px; /* Adjust button size for mobile screens */
+    }
+}

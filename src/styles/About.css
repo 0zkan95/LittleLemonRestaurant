@@ -1,0 +1,88 @@
+
+/* About.css */
+
+.about-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 10vh auto;
+    position: relative;
+    margin-bottom: 20vh;
+}
+
+.about-text {
+    margin-left: 10vw;
+    flex: 1;
+    text-align: left;
+    padding-right: 20px; /* Add space between text and images */
+}
+
+.about-text h3 {
+    margin-bottom: 10px;
+}
+
+.about-text p {
+    width: 30vw;
+    margin: 0;
+    font-size: 1rem;
+    color: #333;
+}
+
+.owners-img {
+    display: flex;
+    position: relative;
+    width: 50%;
+    justify-content: left;
+}
+
+#owner1-img, #owner2-img {
+    width: 80%;
+    height: auto;
+    border-radius: 10px;
+    width: 20vw;
+    height: 35vh;
+}
+
+#owner2-img {
+    position: relative;
+    top: 20%;
+}
+
+@media (max-width: 1024px) {
+    .about-container {
+        flex-direction: column; /* Stack items vertically on tablets */
+    }
+    .about-text p {
+        width: 50vw;
+        text-align: center;
+    }
+    .about-text, .owners-img {
+        width: 100%; /* Ensure full width on smaller screens */
+        text-align: center; /* Center text for smaller screens */
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+    #owner1-img, #owner2-img {
+        width: 80%; /* Adjust size to fit smaller screens */
+    }
+    #owner-img2 {
+        position: relative;
+         top: 0%;
+    }
+}
+
+@media (max-width: 768px) {
+     .about-text p {
+        font-size: 0.9rem; /* Adjust font size for smaller screens */
+        width: 100%;
+        text-align: center;
+    }
+    #owner-img1, #owner-img2 {
+         width: 80%; /* Full width for mobile screens */
+    }
+    #owner-img2 {
+        position: relative;
+         top: 0%;
+    }
+}
