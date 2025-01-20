@@ -1,39 +1,99 @@
 .logo {
-     height: 40px; /* Adjust the size as needed */
+     height: 6vh;
+     /* Adjust the size as needed */
      margin-top: 1vh;
-     margin-right: 10px; /* Add some space between the logo and text */
 }
+
 .navbar {
      display: flex;
-     justify-content: center;
+     justify-content: space-around;
      align-items: center;
      background-color: #fff;
-     padding: 0px 20px;
-}
+     padding: 0px 20px;}
+
 .nav-logo {
      display: flex;
-     align-items: center; /* Center the logo and text vertically */
+     align-items: center;
+     /* Center the logo and text vertically */
      color: #fff;
-     font-size: 1.5em;
 }
+
 .links {
      list-style-type: none;
      display: flex;
      gap: 20px;
 }
+
 .links li {
      display: inline;
 }
+
 .links a {
-     color: #000000;
+     color: #000;
      text-decoration: none;
      font: bolder;
      padding: 0rem 1rem;
 }
+
 .links a:hover {
      border: none;
      background-color: #f4ce14;
      color: #fff;
      border-radius: 30px;
      padding: .5rem 1rem;
+}
+
+/* Hamburger Menu Icon */
+.hamburger {
+     display: none;
+     font-size: 1.5rem;
+     cursor: pointer;
+     background: none;
+     border: none;
+     color: #000;
+}
+
+/* Tablet and Mobile styles */
+
+@media (max-width: 768px) {
+     .navbar {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+     }
+
+     .links {
+          display: none;
+          flex-direction: column;
+          position: absolute;
+          top: 100px;
+          right: 10px;
+          background-color: #fff;
+          border: 1px solid #ddd;
+          border-radius: 10px;
+          width: 200px;
+          box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+          z-index: 20;
+
+     }
+
+     .links.show {
+          display: flex;
+     }
+
+     .links li {
+          margin: 7px 0;
+     }
+
+     .hamburger {
+          display: inline;
+          transform: translate();
+          transform-origin: top right;
+          transition: transform 1s ease-in;
+     }
+
+     .logo {
+          height: 10vh;
+          width: 30vw;
+     }
 }

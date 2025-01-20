@@ -1,7 +1,7 @@
 /* General Styles */
 .container {
-    display: grid; /* Use CSS Grid */
-    grid-template-columns: 1fr; /* Single-column layout by default */
+    display: grid;
+    grid-template-columns: repeat(4, 4fr);
     grid-gap: 20px; /* Space between rows */
     padding: 20px;
     background-color: #495e57;
@@ -14,7 +14,7 @@
 }
 
 .logo img {
-    height: 30vh; /* Keep the large logo size */
+    height: 20vh;
     max-width: 100%;
 }
 
@@ -78,6 +78,7 @@
 
     .logo {
         grid-column: 1 / 2; /* Spans the full width in its row */
+        height: 20vh;
     }
 
     .doormat {
@@ -97,7 +98,7 @@
         grid-template-rows: auto auto auto; /* Explicitly define three rows */
     }
     .logo img {
-        height: 50px; /* Adjust logo size for smaller screens */
+        height: 20vh; 
     }
 
     .contact, .social {
@@ -108,7 +109,7 @@
 /* Small Mobile View (max-width: 480px) */
 @media (max-width: 480px) {
     .logo img {
-        height: 40px; /* Further reduce logo size */
+        height: 20vh; /* Further reduce logo size */
     }
 
     .contact {
