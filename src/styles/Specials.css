@@ -30,7 +30,7 @@
   font-weight: bold;
   padding: 10px 20px;
   font-size: 1rem;
-  background-color: #f4ce14; /* Yellow */
+  background-color: #f4ce14;
   color: #000000;
   border: none;
   border-radius: 5px;
@@ -46,7 +46,7 @@
 /* Special Food Item Styles */
 .section2 {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columns for desktop */
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   width: 100%;
   max-width: 950px;
@@ -63,7 +63,7 @@
   height: 21vh;
   width: 100%;
   border-radius: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 1vh;
   object-fit: cover;
 }
 
@@ -93,7 +93,7 @@
   text-align: left;
   font-size: 0.9rem;
   color: #333;
-  margin-bottom: 15px;
+  margin-bottom: 1vh;
 }
 
 .order {
@@ -104,17 +104,25 @@
 }
 
 .order button {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 15px;
+  font-size: 0.9rem;
   font-weight: bold;
-  padding: 5px 10px;
-  font-size: 1rem;
-  color: rgb(0, 0, 0);
+  color: #fff;
+  background-color: #495e57;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .order button:hover {
   background-color: #f4ce14;
+  transform: scale(1.01);
 }
 
 .ikon {
@@ -124,12 +132,14 @@
 /* Responsive Styles */
 @media (max-width: 768px) {
   .section2 {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 columns for tablets */
   }
 }
 
 @media (max-width: 480px) {
   .section2 {
-    grid-template-columns: 1fr; /* 1 column for mobile */
+    grid-template-columns: 1fr;
+    /* 1 column for mobile */
   }
 }

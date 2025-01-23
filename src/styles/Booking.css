@@ -1,0 +1,138 @@
+.booking-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #495e57;
+}
+
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  font-weight: bold;
+  color: #333;
+}
+
+input,
+select,
+textarea {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.submit-btn {
+  font-size: 1rem;
+  background-color: #f4ce14;
+  color: #000;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #495e57;
+  color: #fff;
+}
+
+.contact-options {
+  margin-top: 20px;
+  display: flex;
+  flex: 1 1 50%;
+  gap: 10px;
+  justify-content: center;
+}
+
+.contact-options button {
+  flex: 1; /* Make both buttons take up equal width */
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center; /* Center icon and text horizontally */
+  align-items: center; /* Center icon and text vertically */
+  gap: 10px; /* Add space between the icon and text */
+  transition: background-color 0.3s ease;
+}
+
+.call-btn i,
+.email-btn i {
+  margin-right:1rem;
+  font-size: 1rem;
+}
+
+.call-btn,
+.email-btn {
+  background-color: transparent;
+  color: #000;
+  border: 2px solid #f4ce14;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.call-btn:hover,
+.email-btn:hover {
+  background-color: #f4ce14;
+  color: #000;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .booking-container {
+    padding: 15px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .booking-form {
+    gap: 10px;
+  }
+
+  .submit-btn,
+  .call-btn,
+  .email-btn {
+    font-size: 0.9rem;
+    padding: 8px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-options {
+    flex-direction: column;
+  }
+
+  .call-btn,
+  .email-btn {
+    width: 100%;
+  }
+}

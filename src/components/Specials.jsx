@@ -19,18 +19,20 @@ const Specials = () => {
             <div className="section2">
                 <div className="food1">
                     <div className="img">
-                     <img src={greek} alt="greek salad" className="food-img" />
+                        <img src={greek} alt="greek salad" className="food-img" />
                     </div>
                     <div className="heading">
                         <h4>Greek Salad</h4>
                         <h5>$12.99</h5>
                     </div>
                     <div className="description">
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, magni?</p>
+                        <p>The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons.</p>
                     </div>
                     <div className="order">
-                        <button>Order a delivery</button>
-                        <img src={ikon} alt="ikon" className="ikon"/>
+                        <button>Order a delivery
+                            <img src={ikon} alt="ikon" className="ikon" />
+                        </button>
+
                     </div>
                 </div>
                 <div className="food1">
@@ -42,27 +44,30 @@ const Specials = () => {
                         <h5>$7.99</h5>
                     </div>
                     <div className="description">
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, magni?</p>
+                        <p>Our Bruschetta is made from grilled bread that has been smeared with garlic, seasoned with salt, and drizzled with olive oil, creating a delightful appetizer.</p>
                     </div>
                     <div className="order">
-                        <button>Order a delivery</button>
-                        <img src={ikon} alt="ikon" className="ikon"/>
+                        <button>Order a delivery
+                            <img src={ikon} alt="ikon" className="ikon" />
+                        </button>
+
                     </div>
                 </div>
                 <div className="food1">
                     <div className="img">
-                    <img src={lemon} alt="bruchetta" className="food-img" />
+                        <img src={lemon} alt="bruchetta" className="food-img" />
                     </div>
                     <div className="heading">
                         <h4>Lemon Dessert</h4>
                         <h5>$5.00</h5>
                     </div>
                     <div className="description">
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, magni?</p>
+                        <p>This comes straight from grandma’s cherished recipe book, every last ingredient has been sourced and is as authentic and nostalgic as can be imagined.</p>
                     </div>
                     <div className="order">
-                        <button>Order a delivery</button>
-                        <img src={ikon} alt="ikon" className="ikon"/>
+                        <button>Order a delivery
+                            <img src={ikon} alt="ikon" className="ikon" />
+                        </button>
                     </div>
                 </div>
             </div>

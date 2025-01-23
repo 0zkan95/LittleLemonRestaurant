@@ -35,9 +35,9 @@ const Footer = () => {
             <div className="social">
                 <h3>Social Media</h3>
                 <ul className="social-links">
-                    <li><a href="#">Facebook</a></li>
-                    <li><a href="#">Linkedin</a></li>
-                    <li><a href="#">Instagram</a></li>
+                    <li><a href="www.facebook.com/littlelemon">Facebook</a></li>
+                    <li><a href="www.linkedin.com/littlelemon">Linkedin</a></li>
+                    <li><a href="www.instagram.com/littlelemon">Instagram</a></li>
                 </ul>
             </div>
 

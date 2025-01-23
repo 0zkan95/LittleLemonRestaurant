@@ -1,0 +1,123 @@
+/* Main container for all courses */
+
+
+.main-course-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+}
+
+#heading {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 1rem auto 0 auto;
+  color: #495e57;
+}
+
+
+.main-course {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns for desktop */
+    gap: 20px;
+    padding: 20px;
+    margin: 2rem auto;
+    max-width: 1200px;
+  }
+  
+  /* Individual course card */
+  .course-card {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 0px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  .course-head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  /* Course image */
+  .course-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1vh;
+  }
+  
+  /* Course title */
+  .course-card h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 1vh;
+  }
+  
+  /* Course price */
+  .course-price {
+    font-size: 1rem;
+    font-weight: bold;
+    color: red;
+    margin-right: 1rem;
+    margin-bottom: 10px;
+  }
+  
+  /* Course description */
+  .course-description {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 2vh;
+    text-align: left;
+  }
+
+  /* Order button */
+.order-button {
+    margin: 0;
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 15px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #495e57;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+
+  .order-button:hover {
+    background-color: #f4ce14;
+    transform: scale(1.01);
+  }
+
+  .order-button .icon {
+    height: 2rem;
+    margin-left: 3rem;
+  }
+
+  /* Responsive Styles */
+@media (max-width: 1024px) {
+    .main-course {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .main-course {
+      grid-template-columns: 1fr; /* 1 column for mobile */
+    }
+}

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import {Link, NavLink, useNavigate } from "react-router-dom";
 import '../styles/NavBar.css';
 import logo from '../images/Logo.svg';
 
@@ -6,14 +7,22 @@ import logo from '../images/Logo.svg';
 
 
 
-const NavBar = () => {
+const NavBar = ({ user, setUser }) => {
+    const [dropdownVisible, setDropdownVisible] = useState(false);
+    const navigate = useNavigate();
     const [menuOpen, setMenuOpen] = useState(false)
+
+    const handleLogout = () => {
+        setUser(null); //Clear user data
+        navigate("/"); //Redirect to Home page
+    };
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
-    }
+    };
 
-    return(
+
+    return (
         <nav className="navbar">
             <div className="nav-logo">
                 <img src={logo} alt="logo" className="logo" />
@@ -24,22 +33,49 @@ const NavBar = () => {
 
             <ul className={`links ${menuOpen ? "show" : ""}`}>
                 <li>
-                    <a href="/">Home</a>
+                    <NavLink to="/" onClick={() => setMenuOpen(false)}>
+                        Home
+                    </NavLink>
                 </li>
                 <li>
-                    <a href="/about">About</a>
+                    <NavLink to="/about" onClick={() => setMenuOpen(false)}>
+                        About
+                    </NavLink>
                 </li>
                 <li>
-                    <a href="/menu">Menu</a>
+                    <NavLink to="/menu" onClick={() => setMenuOpen(false)}>
+                        Menu
+                    </NavLink>
                 </li>
                 <li>
-                    <a href="/reservations">Reservations</a>
+                    <NavLink to="/reservation" onClick={() => setMenuOpen(false)}>
+                        Reservation
+                    </NavLink>
                 </li>
                 <li>
-                    <a href="/order">Order Online</a>
+                    <NavLink to="/order" onClick={() => setMenuOpen(false)}>
+                        Order Online
+                    </NavLink>
                 </li>
                 <li>
-                    <a href="/login">Login</a>
+                    {!user ? (
+                        <NavLink to="/login" onClick={() => setMenuOpen(false)}>
+                            Login
+                        </NavLink>
+                    ) : (
+                        <div className="user-menu">
+                            <span onClick={() => setDropdownVisible((prev) => !prev)}>
+                                {user.name}
+                            </span>
+                            {dropdownVisible && (
+                                <div className="dropdown">
+                                    <Link to="/profile">Profile</Link>
+                                    <button onClick={handleLogout}>Logout</button>
+                                </div>
+                            )}
+                        </div>
+                    )}
+
                 </li>
             </ul>
         </nav>

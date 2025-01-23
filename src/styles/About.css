@@ -30,6 +30,25 @@
     color: #333;
 }
 
+#readmore {
+    margin-top: 3rem;
+    background-color: #f4ce14;
+    font-size: 1rem;
+    font-weight: 100;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    border: none;
+    color: #000;
+    cursor: pointer;
+    box-shadow: 0 0 6px rgb(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease-out;
+}
+
+#readmore:hover {
+    background-color: #495e57;
+    transform: translateY(-5px);
+}
+
 .owners-img {
     display: flex;
     position: relative;

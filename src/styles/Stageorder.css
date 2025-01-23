@@ -1,0 +1,201 @@
+/* Main container */
+.order-container {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: center;
+}
+
+    /* Meals Grid (Left Side) */
+.meals-grid {
+    margin: 5vh auto;
+    margin-left: 10vw;
+    z-index: 1;
+}
+
+.meal-card {
+    display: flex;
+    border-bottom: 1px solid #ddd;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: transparent;
+    text-align: center;
+}
+
+.meal-image {
+    width: 5vw;
+    height: 7vh;
+    border-radius: 10px;
+}
+
+.meals-header {
+    display: flex;
+    flex-direction: column;
+}
+
+.meal-title {
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+.meal-price {
+    font-size: 0.9rem;
+    color: #495e57;
+}
+
+.add-substract {
+    display: flex;
+    flex-direction: row;
+}
+.add-substract button {
+    color: #f4ce14;
+    background-color: transparent;
+    padding: 5px;
+    margin: 2px;
+    border: none;
+    cursor: pointer;
+}
+
+.add-substract button:hover {
+    color: #fff;
+    background-color: #f4ce14;
+}
+
+
+
+/* Progress and Order Details (Right Side) */
+.seco {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    border-left: 1px solid #ddd;
+    margin: 5vh auto;
+}
+
+.progress-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+
+}
+
+.progress {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.progress-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.diamond {
+    width: 30px;
+    height: 30px;
+    background-color: #ddd;
+    transform: rotate(45deg);
+    transition: background-color 0.3s;
+}
+
+.diamond.active {
+    background-color: #f4ce14;
+}
+
+.step-label {
+    font-size: 0.8rem;
+    margin-top: 5px;
+}
+
+  /* Select Your Meal   */
+
+.select-meals {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.select-meals h2 {
+    font-size: 1rem;
+}
+
+.select-meals h3 {
+    align-items: end;
+    justify-content: end;
+    text-align: end;
+}
+
+   /* Recipient Info    */
+
+.recipient-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.recipient-info h2 {
+    font-size: 1rem;
+}
+
+.recipient-form {
+    box-shadow: none;
+}
+
+.row-input {
+    display: flex;
+    flex-direction: row;
+}
+
+.row-input div {
+    margin-left: 5px;
+}
+
+  /* Order Confirmation */
+
+.confirmation {
+    margin-top: 3vh;
+    margin-left: 3vw;
+}
+
+.control-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.control-buttons button {
+    color: #f4ce14;
+    border-radius: 10px;
+    border: 1px solid #f4ce14;
+    background-color: transparent;
+    width: 10vw;
+    margin-left: 5px;
+}
+
+.control-buttons button:hover {
+    color: #fff;
+    background-color: #f4ce14;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .order-container {
+        flex-direction: column;
+    }
+
+    .meals-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+
+    .progress-container {
+        border-left: none;
+        padding: 10px;
+    }
+}

@@ -17,8 +17,15 @@
     margin-left: 10vw;
 }
 
+.left h1 {
+    color: #f4ce14;
+    font-size: 3rem;
+}
+
 .left p {
     width: 20vw;
+    color: #fff;
+    font-size: 1rem;
 }
 
 .left h2, .left p {
