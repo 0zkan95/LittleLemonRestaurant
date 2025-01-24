@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import '../styles/MainCourse.css';
 import Bruschetta from '../images/bruschetta.webp';
 import Falafel from '../images/falafel.webp';
@@ -109,9 +110,18 @@ export const mainCourses = [
 
 
 const MainCourse = () => {
+
+  const navigate = useNavigate();
+
   return (
     <div className="main-course-container">
-      <h2 id="heading">This Season Menu</h2>
+      <div className="mains-header">
+        <h2 id="mains-heading">This Season Menu</h2>
+        <button className="mains-button" onClick={() => navigate('/order')}>
+          Order a Delivery <img src={icon} className="icon" alt="main courses" />
+        </button>
+      </div>
+
       <div className="main-course">
         {mainCourses.map((course) => (
           <div key={course.id} className="course-card">
@@ -122,9 +132,7 @@ const MainCourse = () => {
             </div>
 
             <p className="course-description">{course.description}</p>
-            <button className="order-button">
-              Order a Delivery <img src={icon} className="icon" alt="main courses" />
-            </button>
+
           </div>
         ))}
       </div>

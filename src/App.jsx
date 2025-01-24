@@ -10,6 +10,7 @@ import Login from './pages/Login';
 import SignUp from './pages/Signup';
 import React from 'react';
 import NavBar from './components/NavBar';
+import ConfirmedBooking from './components/ConfirmedBooking';
 
 
 
@@ -28,6 +29,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/menu" element={<Menu />} />
         <Route path='/reservation' element={<Reserv />} />
+        <Route path='/confirmed' element={<ConfirmedBooking />} />
         <Route path="/order" element={<Order />} />
         <Route path="/login" element={<Login setUser={setUser} />} />
         <Route path="/signup" element={<SignUp />} />

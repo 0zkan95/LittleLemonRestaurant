@@ -4,16 +4,49 @@
 .desserts-container {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
-
 }
 
-#heading {
+.desserts-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    max-width: 950px;
+    margin-bottom: 5px;
+}
+
+
+
+#desserts-heading {
     font-size: 2rem;
-    font-weight: bold;
-    margin: 1rem auto 0 auto;
     color: #495e57;
+}
+
+#order-button {
+    align-items: center;
+    text-align: center;
+    padding: 10px 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #f4ce14;
+    background-color: transparent;
+    border: 1px solid #f4ce14;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#order-button:hover {
+  background-color: #f4ce14;
+  color: #fff;
+}
+
+#order-button .icon {
+    height: 2rem;
+    margin-left: 3rem;
 }
 
 
@@ -80,34 +113,8 @@
     text-align: left;
 }
 
-    /* Order button */
-.order-button {
-      margin: 0;
-      width: 100%;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      padding: 10px 15px;
-      font-size: 0.9rem;
-      font-weight: bold;
-      color: #fff;
-      background-color: #495e57;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s ease, transform 0.3s ease;
-}
 
-.order-button:hover {
-    background-color: #f4ce14;
-    transform: scale(1.01);
-}
 
-.order-button .icon {
-    height: 2rem;
-    margin-left: 3rem;
-}
 
     /* Responsive Styles */
 
