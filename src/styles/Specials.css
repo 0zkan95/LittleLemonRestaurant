@@ -96,35 +96,6 @@
   margin-bottom: 1vh;
 }
 
-.order {
-  margin-top: 3rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.order button {
-  width: 100%;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  padding: 10px 15px;
-  font-size: 0.9rem;
-  font-weight: bold;
-  color: #fff;
-  background-color: #495e57;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.order button:hover {
-  background-color: #f4ce14;
-  transform: scale(1.01);
-}
-
 .ikon {
   height: 30px;
 }

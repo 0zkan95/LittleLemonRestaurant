@@ -14,9 +14,6 @@ import ConfirmedBooking from './components/ConfirmedBooking';
 
 
 
-
-
-
 function App() {
   const [user, setUser] = useState(null);  // Track logged-in user state
 

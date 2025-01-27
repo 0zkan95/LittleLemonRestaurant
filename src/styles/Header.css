@@ -7,14 +7,16 @@
     padding: 20px;
     background-color: #495f57; /* Background color corrected */
     position: relative;
+    margin-bottom: 20vh;
 }
 
 .left {
     grid-column: 1 / 2; /* Left container in the first column */
     text-align: left;
     padding: 20px; /* Add padding for spacing */
-    width: 30vw;
-    margin-left: 10vw;
+    width: 40vw;
+    height: 45vh;
+    margin-left: 15vw;
 }
 
 .left h1 {
@@ -58,8 +60,8 @@
 
 .header-img img {
     position: absolute;
-    top: -14vh;
-    width: 20vw;
+    top: -15vh;
+    width: 18vw;
     border-radius: 10px;
 }
 
