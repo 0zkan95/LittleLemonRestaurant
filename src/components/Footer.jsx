@@ -8,7 +8,7 @@ const Footer = () => {
     return (
         <div className="container">
             <div className="logo">
-                <img src={proxyimg} alt="logo1"  id="logo1" />
+                <img src={proxyimg} alt="logo1" id="logo1" />
             </div>
             <div className="doormat">
                 <h3>Doormat Navigation</h3>
@@ -23,14 +23,16 @@ const Footer = () => {
             </div>
             <div className="contact">
                 <h3>Contact</h3>
-                <h4>Address:</h4>
-                <h6>Little Lemon Restaurant
-                    123 Main Street
-                    Anytown, USA 12345</h6>
-                <h4>Phone:</h4>
-                <h6>555111222</h6>
-                <h4>Email:</h4>
-                <h6>info@littlelemon.com</h6>
+                <div className="contact-info">
+                    <h4>Address:</h4>
+                    <h6>Little Lemon Restaurant <br />
+                        123 Main Street <br />
+                        Anytown, USA 12345</h6>
+                    <h4>Phone:</h4>
+                    <h6>555111222</h6>
+                    <h4>Email:</h4>
+                    <h6>info@littlelemon.com</h6>
+                </div>
             </div>
             <div className="social">
                 <h3>Social Media</h3>

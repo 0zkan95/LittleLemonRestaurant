@@ -1,67 +1,78 @@
 /* Main container */
-.order-container {
+.ordercontainer {
+    padding: 2rem 5rem;
     display: flex;
     flex-direction: row;
     align-items: start;
     justify-content: center;
 }
 
-    /* Meals Grid (Left Side) */
-.meals-grid {
-    margin: 5vh auto;
-    margin-left: 10vw;
-    z-index: 1;
+.order-meals-con {
+    border: 2px solid #111;
+    border-radius: 30px;
+    background-color: transparent;
+    width: 50rem;
+    height: 40rem;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    
 }
 
-.meal-card {
+.order-meals-con > h3 {
+    font-family: 'Markazi Text', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1rem;
+    color: #111;
+    text-align: start;
+    padding: 1rem;
+    padding-left: 2rem;
+}
+
+.order-meal-card {
     display: flex;
-    border-bottom: 1px solid #ddd;
     flex-direction: row;
+    background-color: transparent;
+    border-bottom:1px solid #ddd;
     align-items: center;
     justify-content: space-between;
-    background-color: transparent;
-    text-align: center;
+    margin: 0.2rem 1rem;
 }
 
-.meal-image {
-    width: 5vw;
-    height: 7vh;
-    border-radius: 10px;
-}
-
-.meals-header {
+.order-meals-header{
+    font-family: 'Karla', sans-serif;  
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.meal-title {
-    font-size: 1rem;
-    margin: 5px 0;
+.order-meals-header p {
+    font-size: 1.2rem;
 }
 
-.meal-price {
-    font-size: 0.9rem;
-    color: #495e57;
+.order-meal-img{
+    border-radius: 10px;
+    width: 70px;
 }
+
 
 .add-substract {
     display: flex;
     flex-direction: row;
+    margin: .1rem .5rem;
 }
+
 .add-substract button {
-    color: #f4ce14;
+    color: white;
     background-color: transparent;
-    padding: 5px;
-    margin: 2px;
-    border: none;
     cursor: pointer;
 }
 
 .add-substract button:hover {
-    color: #fff;
-    background-color: #f4ce14;
+    color: #f4ce14;
+    background-color: white;
 }
-
 
 
 /* Progress and Order Details (Right Side) */
@@ -164,6 +175,7 @@
 }
 
 .control-buttons {
+    margin-top: 1rem;
     display: flex;
     flex-direction: row;
     justify-content: center;

@@ -1,17 +1,18 @@
 import React from "react";
-import '../styles/About.css';
+import styles from '../styles/About.module.css';
 import {  useNavigate } from 'react-router-dom';
 import ownerimg1 from '../images/Mario and Adrian A.jpg';
 import ownerimg2 from '../images/Mario and Adrian b.jpg';
-
+import '@fontsource/karla';
+import '@fontsource/markazi-text';
 
 
 const Aboutt = () => {
     const navigate = useNavigate();
 
     return (
-        <div className="about-container">
-            <div className="about-text">
+        <div className={`${styles["about-container"]}`}>
+            <div className={`${styles["about-text"]}`}>
                 <h2>Little Lemon</h2>
                 <h3>Chicago</h3>
                 <p>Little Lemon is owned by two Italian brothers,
@@ -25,14 +26,16 @@ const Aboutt = () => {
                  to incorporate additional cuisines from the
                  Mediterranean region.
                 </p>
-                <button onClick={() => navigate('/about')} id="readmore">Read More</button>
+                <button onClick={() => navigate('/about')} className={`${styles["readmore"]}`}>
+                    Read More
+                </button>
             </div>
-            <div className="owners-img">
+            <div className={`${styles["owners-img"]}`}>
                 <div >
-                    <img src={ownerimg1} alt="owners 1" id="owner1-img" />
+                    <img src={ownerimg1} alt="owners 1" id={`${styles["owner1-img"]}`} />
                 </div>
                 <div >
-                    <img src={ownerimg2} alt="owners 2" id="owner2-img"/>
+                    <img src={ownerimg2} alt="owners 2" id={`${styles["owner2-img"]}`}/>
                 </div>
             </div>
         </div>

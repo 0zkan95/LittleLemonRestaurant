@@ -1,11 +1,14 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import '../styles/Stageorder.css';
-import { drinks } from "./Drinks";
-import { desserts } from "./Dessert";
-import { mainCourses } from "./Maincourse";
+import styles from '../styles/Stageorder.module.css';
+import { drinks } from "../data/index";
+import { desserts } from "../data/index";
+import { mainCourses } from "../data/index";
 import { GrSubtractCircle } from "react-icons/gr";
 import { TbCirclePlus } from "react-icons/tb";
+import '@fontsource/karla';
+import '@fontsource/markazi-text';
+
 
 
 const OrderOnline = () => {
@@ -66,7 +69,10 @@ const OrderOnline = () => {
         setErrors(newErrors);
         return Object.keys(newErrors).length === 0;
     };
-    const allItems = [...mainCourses, ...drinks, ...desserts];
+    
+    const mainCoursesMenu = [...mainCourses];
+    const drinksMenu = [...drinks];
+    const dessertsMenu = [...desserts];
 
     const addToCart = (item) => {
         setCart((prevCart) => [...prevCart, item]);
@@ -94,43 +100,95 @@ const OrderOnline = () => {
         if (cart.length === 0) {
             alert("Your cart is empty. Please add items to your cart before confirming the order.")
         } else {
-            alert ("Thank you for your order!")
+            alert("Thank you for your order!")
             navigate('/')
         }
     };
 
     return (
-        <div className="order-container">
+        <div className={styles.ordercontainer}>
 
-            {/* meals menu render */}
-
-            <div className="meals-grid">
-                {allItems.map((item) => (
-                    <div key={item.id} className="meal-card">
-                        <img src={item.image} alt={item.title} className="meal-image" />
-                        <div className="meals-header">
-                            <h3 className="meal-title">{item.title}</h3>
-                            <p className="meal-price">${item.price}</p>
+            <div className={`${styles['order-meals-con']}`}>
+                <h3>Desserts</h3>
+                {dessertsMenu.map((item) => (
+                    <div key={item.id} className={`${styles['order-meal-card']}`}>
+                        <img
+                            src={item.image}
+                            alt={item.title}
+                            className={`${styles["order-meal-img"]}`}
+                        />
+                        <div className={`${styles['order-meals-header']}`}>
+                            <h3>{item.title}</h3>
+                            <p>${item.price}</p>
                         </div>
-                        <div className="add-substract">
-                            <button onClick={() => subtractFromCart(item)}> <GrSubtractCircle style={{ fontSize: '1.8rem' }} /> </button>
-                            <button onClick={() => addToCart(item)}> <TbCirclePlus style={{ fontSize: '2rem' }} /> </button>
+                        <div className={`${styles["add-substract"]}`}>
+                            <button onClick={() => subtractFromCart(item)}>
+                                 <GrSubtractCircle style={{ fontSize: '1.8rem' }} /> 
+                            </button>
+                            <button onClick={() => addToCart(item)}>
+                                 <TbCirclePlus style={{ fontSize: '2rem' }} />
+                            </button>
+                        </div>
+                    </div>
+                ))}
+                <h3>Drinks</h3>
+                {drinksMenu.map((item) => (
+                    <div key={item.id} className={`${styles['order-meal-card']}`}>
+                        <img
+                            src={item.image}
+                            alt={item.title}
+                            className={`${styles["order-meal-img"]}`}
+                        />
+                        <div className={`${styles['order-meals-header']}`}>
+                            <h3>{item.title}</h3>
+                            <p>${item.price}</p>
+                        </div>
+                        <div className={`${styles["add-substract"]}`}>
+                            <button onClick={() => subtractFromCart(item)}>
+                                 <GrSubtractCircle style={{ fontSize: '1.8rem' }} />
+                            </button>
+                            <button onClick={() => addToCart(item)}>
+                                 <TbCirclePlus style={{ fontSize: '2rem' }} />
+                            </button>
+                        </div>
+                    </div>
+                ))}
+                <h3>Main Courses</h3>
+                {mainCoursesMenu.map((item) => (
+                    <div key={item.id} className={`${styles['order-meal-card']}`}>
+                        <img
+                            src={item.image}
+                            alt={item.title}
+                            className={`${styles["order-meal-img"]}`}
+                        />
+                        <div className={`${styles['order-meals-header']}`}>
+                            <h3>{item.title}</h3>
+                            <p>${item.price}</p>
+                        </div>
+                        <div className={`${styles["add-substract"]}`}>
+                            <button onClick={() => subtractFromCart(item)}> 
+                                <GrSubtractCircle style={{ fontSize: '1.8rem' }} /> 
+                            </button>
+                            <button onClick={() => addToCart(item)}> 
+                                <TbCirclePlus style={{ fontSize: '2rem' }} /> 
+                            </button>
                         </div>
                     </div>
                 ))}
             </div>
 
+
             {/* Progress Bar */}
-            <div className="seco">
-                <div className="progress-container">
-                    <div className="progress">
+            <div className={styles.seco}>
+                <div className={`${styles["progress-container"]}`}>
+                    <div className={styles.progress}>
                         {["Select Meals", "Recipient Info", "Confirmation"].map(
                             (label, index) => (
-                                <div key={index} className="progress-step">
+                                <div key={index} className={`${styles["progress-step"]}`}>
                                     <div
-                                        className={`diamond ${index + 1 <= stage ? "active" : ""}`}
+                                        className={`${styles.diamond} ${index + 1 <= stage ? styles.active : ''}`}
                                     ></div>
-                                    <span className="step-label">{label}</span>
+                                    <span className={`${styles["step-label"]}`}>{label}</span>
                                 </div>
                             )
                         )}
@@ -139,7 +197,7 @@ const OrderOnline = () => {
 
 
                 {stage === 1 && (
-                    <div className="select-meals">
+                    <div className={`${styles["select-meals"]}`}>
                         <h2>Select Your Meals</h2>
                         <ul>
                             {cart.map((item, index) => (
@@ -149,17 +207,17 @@ const OrderOnline = () => {
                             ))}
                         </ul>
                         <h3>Total: ${cart.reduce((acc, item) => acc + Number(item.price), 0)}</h3>
-                        <div className="control-buttons">
+                        <div className={`${styles["control-buttons"]}`}>
                             <button onClick={nextStage}> Next </button>
                         </div>
                     </div>
                 )}
 
                 {stage === 2 && (
-                    <div className="recipient-info">
+                    <div className={`${styles["recipient-info"]}`}>
                         <h2>Recipient Information</h2>
-                        <form className="recipient-form">
-                            <div className="row-input">
+                        <form className={`${styles["recipient-form"]}`}>
+                            <div className={`${styles["row-input"]}`}>
                                 <div>
                                     <label>Name:</label>
                                     <input
@@ -220,7 +278,7 @@ const OrderOnline = () => {
                                     placeholder="name surname"
                                 />
                             </div>
-                            <div className="row-input">
+                            <div className={`${styles["row-input"]}`}>
                                 <div>
                                     <label>Expiry Date:</label>
                                     <input
@@ -246,7 +304,7 @@ const OrderOnline = () => {
                             </div>
 
                         </form>
-                        <div className="control-buttons">
+                        <div className={`${styles["control-buttons"]}`}>
                             <button onClick={previousStage}>Back </button>
                             <button onClick={nextStage}>Next </button>
                         </div>
@@ -255,7 +313,7 @@ const OrderOnline = () => {
                 )}
 
                 {stage === 3 && (
-                    <div className="confirmation">
+                    <div className={`${styles["confirmation"]}`}>
                         <h2>Order Confirmation</h2>
                         <p><strong>Name:</strong> {recipientInfo.name}</p>
                         <p><strong>Surname:</strong> {recipientInfo.surname}</p>
@@ -270,12 +328,12 @@ const OrderOnline = () => {
                             ))}
                         </ul>
                         <h3>Total: ${cart.reduce((acc, meal) => acc + Number(meal.price), 0)}</h3>
-                        <div className="control-buttons">
+                        <div className={`${styles["control-buttons"]}`}>
                             <button onClick={previousStage}>Back </button>
-                            <button 
+                            <button
                                 onClick={handleConfirmOrder}>
-                                    Confirm Order
-                                </button>
+                                Confirm Order
+                            </button>
                         </div>
 
                     </div>

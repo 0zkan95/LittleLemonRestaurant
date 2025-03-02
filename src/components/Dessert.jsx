@@ -6,38 +6,20 @@ import LemDess from '../images/lemon-dessert.webp';
 import Terrine from '../images/panna-cotta-terrine.webp';
 import Parfaits from '../images/ricotta-strawberry-partfaits.webp';
 import icon from '../images/courier.jpg';
+import { desserts } from "../data/index";
+import '@fontsource/karla';
+import '@fontsource/markazi-text';
 
 
-export const desserts = [
-  {
-    id: 17,
-    title: "Banana Chocolate Pancake",
-    price: "8",
-    description: "Indulge in the delightful Banana Chocolate Pancake—a perfect blend of fluffy pancakes, ripe bananas, and rich chocolate, offering a sweet escape on your plate.",
-    image: Pancake
-  },
-  {
-    id: 18,
-    title: "Lemon Dessert",
-    price: "8",
-    description: "This comes straight from grandma’s cherished recipe book, every last ingredient has been sourced and is as authentic and nostalgic as can be imagined.",
-    image: LemDess
-  },
-  {
-    id: 19,
-    title: "Panna Cotta Terrine",
-    price: "8",
-    description: "Savor the exquisite Panna Cotta Terrine, a luscious Italian dessert. Layers of velvety cream and fruit coulis create a heavenly symphony for your taste buds.",
-    image: Terrine
-  },
-  {
-    id: 20,
-    title: "Strawberry Parfaits",
-    price: "8",
-    description: "Indulge in the delightful sweetness of our Strawberry Parfaits, a perfect harmony of fresh strawberries, creamy layers, and heavenly bliss.",
-    image: Parfaits
-  },
-]
+
+const dessertItems = [...desserts];
+
+const imgGalary = {
+  Pancake: Pancake,
+  LemDess: LemDess,
+  Terrine: Terrine,
+  Parfaits: Parfaits
+}
 
 const Desserts = () => {
   const navigate = useNavigate();
@@ -51,9 +33,9 @@ const Desserts = () => {
         </button>
       </div>
       <div className="desserts">
-        {desserts.map((dessert) => (
+        {dessertItems.map((dessert) => (
           <div key={dessert.id} className="desserts-card">
-            <img src={dessert.image} alt={dessert.title} className="desserts-image" />
+            <img src={imgGalary[dessert.image]} alt={dessert.title} className="desserts-image" />
             <div className="desserts-head">
               <h3>{dessert.title}</h3>
               <p className="desserts-price">${dessert.price}</p>

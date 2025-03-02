@@ -1,4 +1,7 @@
 /* Testimonials.css */
+*{
+    font-family: 'Karla', sans-serif;
+}
 
 .tes-container {
     text-align: center;
@@ -7,8 +10,9 @@
 }
 
 .tes-container h2 {
+    font-family: 'Markazi Text', sans-serif;
     margin: 10vh 0vw;
-    font-size: 2rem; /* Adjust font size for better visual hierarchy */
+    font-size: 3rem; 
 }
 
 .reviews {

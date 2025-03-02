@@ -1,6 +1,7 @@
 * {
   margin: 0;
   box-sizing: border-box;
+  font-family: 'Karla', sans-serif;
 }
 
 .spe-container {
@@ -22,7 +23,8 @@
 }
 
 .section1 h2 {
-  font-size: 2rem;
+  font-family: 'Markazi Text', sans-serif;
+  font-size: 3rem;
   margin-bottom: 10px;
 }
 
