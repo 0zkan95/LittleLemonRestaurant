@@ -4,52 +4,44 @@ import styles from '../styles/Booking.module.css';
 import { useNavigate } from "react-router-dom";
 import '@fontsource/karla';
 import '@fontsource/markazi-text';
+import {fetchAPI, submitAPI} from '../APIs/api';
 
-
-const avaibleTimesReducer = (state, action) => {
-  switch (action.type) {
-    case "INITIALIZE_TIMES":
-      return action.payload;
-    case "UPDATE_TIMES":
-      return action.payload;
-    default:
-      return state;
-  }
-};
-
-const useBookingAPI = () => {
-  const fetchAPI = async (date) => {
-    // Simulate fetching available times
-    return ["17:00", "18:00", "19:00", "20:00", "21:00"];
-  };
-
-  const submitAPI = async (formData) => {
-    // Simulate form submission
-    console.log("Form data submitted:", formData);
-    return true; // Simulate successful submission
-  };
-
-  return { fetchAPI, submitAPI };
-};
 
 
 const Booking = () => {
 
-  const [availableTimes, dispatch] = useReducer(avaibleTimesReducer, []);
-  const { fetchAPI, submitAPI } = useBookingAPI(); // Using custom hook
-  const navigate = useNavigate();  // Initializing useNavigate
+  const [availableTimes, dispatch] = useReducer((state, action) => {
+    switch (action.type) {
+      case 'INITIALIZE_TIMES':
+        return action.payload;
+      case 'UPDATE_TIMES':
+        return action.payload;
+      default:
+        return state;
+    }
+  }, []);
+  const navigate = useNavigate(); 
+  const [formData, setFormData] = useState({
+    date: '',
+    time: '',
+    guests: 2,
+    seats: 'indoor',
+    occasion: '',
+    specialRequests: '',
+  }); 
 
   // Fetch availble times for today's date
   const initializeTimes = async () => {
-    const today = new Date().toISOString().split("T")[0]; //Get today's date in YYYY-MM-DD
-    const times = await fetchAPI(today); //Fetch avaible times for today
-    dispatch({ type: "INITIALIZE_TIMES", payload: times });
+    const today = new Date(); // Get today's date as a Date object
+    const times = fetchAPI(today); // Use imported fetchAPI
+    dispatch({ type: 'INITIALIZE_TIMES', payload: times });
   };
 
   // Fetch vailable times for a selected date
-  const updateTimes = async (date) => {
-    const times = await fetchAPI(date); // Fetch available times for the selected date
-    dispatch({ type: "UPDATE_TIMES", payload: times });
+  const updateTimes = async (dateString) => {
+    const selectedDate = new Date(dateString); // Convert string to Date object
+    const times = fetchAPI(selectedDate); // Use imported fetchAPI
+    dispatch({ type: 'UPDATE_TIMES', payload: times });
   };
 
   // Initialize available times when the component mounts
@@ -60,46 +52,32 @@ const Booking = () => {
   // Handle date selection
   const handleDateChange = async (e) => {
     const selectedDate = e.target.value;
-    setFormData({...formData, date: selectedDate });  //Update formData
-    updateTimes(selectedDate); // Fetch available times
+    setFormData({ ...formData, date: selectedDate });
+    updateTimes(selectedDate);
   };
 
   // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
     const formData = new FormData(e.target);
-    
     const reservationDetails = {};
     for (let [key, value] of formData.entries()) {
       reservationDetails[key] = value;
     }
 
-
-
-    const isSubmitted = await submitAPI(reservationDetails); //access submitAPI 
+    const isSubmitted = submitAPI(reservationDetails); // Use imported submitAPI
     if (isSubmitted) {
-      navigate("/confirmed"); // Navigate to the confirmation page
+      navigate('/confirmed');
     } else {
-      alert("Failed to submit reservation. Please try again.")
+      alert('Failed to submit reservation. Please try again.');
     }
   };
 
-
-
-  const [formData, setFormData] = useState({
-    date: "",
-    time: "",
-    guests: 2,
-    seats: "indoor",
-    occasion: "",
-    specialRequests: "",
-  });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
-
 
 
   return (
