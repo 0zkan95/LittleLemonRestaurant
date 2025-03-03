@@ -1,4 +1,5 @@
 .signup-container {
+    font-family: 'Karla', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,9 +16,10 @@
 }
 
 .signup h2 {
+    font-family: 'Markazi Text', sans-serif;
     margin-bottom: 1rem;
     text-align: center;
-    color: #495e57;
+    color: #f4ce14;
 }
 
 .signup label {
@@ -35,17 +37,18 @@
 }
 
 #register {
-    background-color: #495e57;
-    color: white;
+    background-color: transparent;
+    border: 1px solid #f4ce14;
+    color: #000;
     padding: 0.5rem;
-    border: none;
-    border-radius: 4px;
+    border-radius: 10px;
     cursor: pointer;
     width: 100%;
     margin-top: 1rem;
 }
 
-button:hover {
+#register:hover {
+    color: #fff;
     background-color: #f4ce14;
 }
 

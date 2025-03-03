@@ -8,8 +8,56 @@ import { GrSubtractCircle } from "react-icons/gr";
 import { TbCirclePlus } from "react-icons/tb";
 import '@fontsource/karla';
 import '@fontsource/markazi-text';
+import Aigua from '../images/aigua-de-valencia.webp';
+import MedWine from '../images/wine.webp';
+import MintLemon from '../images/mint-lemonade.webp';
+import PinkLady from '../images/pink-lady.webp';
+import Pancake from '../images/banana-chocolate-pancake.webp';
+import LemDess from '../images/lemon-dessert.webp';
+import Terrine from '../images/panna-cotta-terrine.webp';
+import Parfaits from '../images/ricotta-strawberry-partfaits.webp';
+import Bruschetta from '../images/bruschetta.webp';
+import Falafel from '../images/falafel.webp';
+import GreekSalad from '../images/greek-salad.webp';
+import GrilledBrouchetta from '../images/grilled-brouchet.webp';
+import GrilledCheken from '../images/grilled-chicken.webp';
+import GrilledFish from '../images/grilled-fish.webp';
+import GrilledSalmon from '../images/grilled-salmon.webp';
+import LentilWaff from '../images/savory-lentil-waffles.webp';
+import MediterChicken from '../images/mediterranean-chicken.webp';
+import MediterPasta from '../images/pasta.webp';
+import TurPanini from '../images/turkey-panini.webp';
+import MedPizza from '../images/pizza.webp';
 
 
+const dessertImgGalary = {
+    Pancake: Pancake,
+    LemDess: LemDess,
+    Terrine: Terrine,
+    Parfaits: Parfaits
+}
+
+const drinkImgGalary = {
+    Aigua: Aigua,
+    MedWine: MedWine,
+    MintLemon: MintLemon,
+    PinkLady: PinkLady
+}
+
+const mainImgGalary = {
+    Bruschetta: Bruschetta,
+    Falafel: Falafel,
+    GreekSalad: GreekSalad,
+    GrilledBrouchetta: GrilledBrouchetta,
+    GrilledCheken: GrilledCheken,
+    GrilledFish: GrilledFish,
+    GrilledSalmon: GrilledSalmon,
+    LentilWaff: LentilWaff,
+    MediterChicken: MediterChicken,
+    MediterPasta: MediterPasta,
+    TurPanini: TurPanini,
+    MedPizza: MedPizza
+}
 
 const OrderOnline = () => {
     const navigate = useNavigate();
@@ -69,7 +117,7 @@ const OrderOnline = () => {
         setErrors(newErrors);
         return Object.keys(newErrors).length === 0;
     };
-    
+
     const mainCoursesMenu = [...mainCourses];
     const drinksMenu = [...drinks];
     const dessertsMenu = [...desserts];
@@ -113,7 +161,7 @@ const OrderOnline = () => {
                 {dessertsMenu.map((item) => (
                     <div key={item.id} className={`${styles['order-meal-card']}`}>
                         <img
-                            src={item.image}
+                            src={dessertImgGalary[item.image]}
                             alt={item.title}
                             className={`${styles["order-meal-img"]}`}
                         />
@@ -123,10 +171,10 @@ const OrderOnline = () => {
                         </div>
                         <div className={`${styles["add-substract"]}`}>
                             <button onClick={() => subtractFromCart(item)}>
-                                 <GrSubtractCircle style={{ fontSize: '1.8rem' }} /> 
+                                <GrSubtractCircle style={{ fontSize: '1.8rem' }} />
                             </button>
                             <button onClick={() => addToCart(item)}>
-                                 <TbCirclePlus style={{ fontSize: '2rem' }} />
+                                <TbCirclePlus style={{ fontSize: '2rem' }} />
                             </button>
                         </div>
                     </div>
@@ -135,7 +183,7 @@ const OrderOnline = () => {
                 {drinksMenu.map((item) => (
                     <div key={item.id} className={`${styles['order-meal-card']}`}>
                         <img
-                            src={item.image}
+                            src={drinkImgGalary[item.image]}
                             alt={item.title}
                             className={`${styles["order-meal-img"]}`}
                         />
@@ -145,10 +193,10 @@ const OrderOnline = () => {
                         </div>
                         <div className={`${styles["add-substract"]}`}>
                             <button onClick={() => subtractFromCart(item)}>
-                                 <GrSubtractCircle style={{ fontSize: '1.8rem' }} />
+                                <GrSubtractCircle style={{ fontSize: '1.8rem' }} />
                             </button>
                             <button onClick={() => addToCart(item)}>
-                                 <TbCirclePlus style={{ fontSize: '2rem' }} />
+                                <TbCirclePlus style={{ fontSize: '2rem' }} />
                             </button>
                         </div>
                     </div>
@@ -157,7 +205,7 @@ const OrderOnline = () => {
                 {mainCoursesMenu.map((item) => (
                     <div key={item.id} className={`${styles['order-meal-card']}`}>
                         <img
-                            src={item.image}
+                            src={mainImgGalary[item.image]}
                             alt={item.title}
                             className={`${styles["order-meal-img"]}`}
                         />
@@ -166,11 +214,11 @@ const OrderOnline = () => {
                             <p>${item.price}</p>
                         </div>
                         <div className={`${styles["add-substract"]}`}>
-                            <button onClick={() => subtractFromCart(item)}> 
-                                <GrSubtractCircle style={{ fontSize: '1.8rem' }} /> 
+                            <button onClick={() => subtractFromCart(item)}>
+                                <GrSubtractCircle style={{ fontSize: '1.8rem' }} />
                             </button>
-                            <button onClick={() => addToCart(item)}> 
-                                <TbCirclePlus style={{ fontSize: '2rem' }} /> 
+                            <button onClick={() => addToCart(item)}>
+                                <TbCirclePlus style={{ fontSize: '2rem' }} />
                             </button>
                         </div>
                     </div>

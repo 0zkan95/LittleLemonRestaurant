@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import '../styles/Desserts.css';
+import styles from '../styles/Desserts.module.css';
 import Pancake from '../images/banana-chocolate-pancake.webp';
 import LemDess from '../images/lemon-dessert.webp';
 import Terrine from '../images/panna-cotta-terrine.webp';
@@ -25,22 +25,26 @@ const Desserts = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="desserts-container">
-      <div className="desserts-header">
-        <h2 id="desserts-heading">This Season Desserts</h2>
-        <button id="order-button" onClick={() => navigate('/order')}>
-          Order a Delivery <img src={icon} className="icon" alt="desserts" />
+    <div className={`${styles["desserts-container"]}`}>
+      <div className={`${styles["desserts-header"]}`}>
+        <h2 id={`${styles["desserts-heading"]}`}>This Season Desserts</h2>
+        <button id={`${styles["order-button"]}`} onClick={() => navigate('/order')}>
+          Order a Delivery 
+          <img src={icon} className={styles.icon} alt="desserts" />
         </button>
       </div>
-      <div className="desserts">
+      <div className={`${styles["desserts"]}`}>
         {dessertItems.map((dessert) => (
-          <div key={dessert.id} className="desserts-card">
-            <img src={imgGalary[dessert.image]} alt={dessert.title} className="desserts-image" />
-            <div className="desserts-head">
+          <div key={dessert.id} className={`${styles["desserts-card"]}`}>
+            <img 
+              src={imgGalary[dessert.image]} 
+              alt={dessert.title} 
+              className={`${styles["desserts-image"]}`} />
+            <div className={`${styles["desserts-head"]}`}>
               <h3>{dessert.title}</h3>
-              <p className="desserts-price">${dessert.price}</p>
+              <p className={`${styles["desserts-price"]}`}>${dessert.price}</p>
             </div>
-            <p className="desserts-description">{dessert.description}</p>
+            <p className={`${styles["desserts-description"]}`}>{dessert.description}</p>
           </div>
         ))}
       </div>

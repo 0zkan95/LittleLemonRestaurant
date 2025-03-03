@@ -1,16 +1,18 @@
 import React from "react";
-import '../styles/Footer.css';
+import styles from '../styles/Footer.module.css';
 import proxyimg from "../images/proxy-image.png";
+import '@fontsource/karla';
+import '@fontsource/markazi-text';
 
 
 
 const Footer = () => {
     return (
-        <div className="container">
-            <div className="logo">
-                <img src={proxyimg} alt="logo1" id="logo1" />
+        <div className={styles.container}>
+            <div className={styles.logo}>
+                <img src={proxyimg} alt="logo1" id={styles.logo1} />
             </div>
-            <div className="doormat">
+            <div className={styles.doormat}>
                 <h3>Doormat Navigation</h3>
                 <ul>
                     <li><a href="/">Home</a></li>
@@ -21,9 +23,9 @@ const Footer = () => {
                     <li><a href="/login">Login</a></li>
                 </ul>
             </div>
-            <div className="contact">
+            <div className={styles.contact}>
                 <h3>Contact</h3>
-                <div className="contact-info">
+                <div className={`${styles["contact-info"]}`}>
                     <h4>Address:</h4>
                     <h6>Little Lemon Restaurant <br />
                         123 Main Street <br />
@@ -34,15 +36,14 @@ const Footer = () => {
                     <h6>info@littlelemon.com</h6>
                 </div>
             </div>
-            <div className="social">
+            <div className={styles.social}>
                 <h3>Social Media</h3>
-                <ul className="social-links">
+                <ul className={`${styles["social-links"]}`}>
                     <li><a href="www.facebook.com/littlelemon">Facebook</a></li>
                     <li><a href="www.linkedin.com/littlelemon">Linkedin</a></li>
                     <li><a href="www.instagram.com/littlelemon">Instagram</a></li>
                 </ul>
             </div>
-
         </div>
     )
 }

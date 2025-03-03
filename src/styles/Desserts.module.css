@@ -1,7 +1,7 @@
-/* Desserts container for all drinks */
 
 
 .desserts-container {
+    font-family: 'Karla', sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -14,15 +14,15 @@
     justify-content: space-between;
     align-items: center;
     width: 100vw;
-    max-width: 950px;
+    padding: 0rem 1rem;
     margin-bottom: 5px;
 }
 
 
-
 #desserts-heading {
-    font-size: 2rem;
-    color: #495e57;
+    font-family: 'Markazi Text', sans-serif;
+    font-size: 3rem;
+    color: #f4ce14;
 }
 
 #order-button {
@@ -40,8 +40,8 @@
 }
 
 #order-button:hover {
-  background-color: #f4ce14;
-  color: #fff;
+    background-color: #f4ce14;
+    color: #fff;
 }
 
 #order-button .icon {
@@ -51,15 +51,15 @@
 
 
 .desserts {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr); /* 4 columns for desktop */
-      gap: 20px;
-      padding: 20px;
-      margin: 2rem auto;
-      max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* 4 columns for desktop */
+    gap: 20px;
+    padding: 20px;
+    margin: 2rem auto;
+    max-width: 1200px;
 }
 
-    /* Individual course card */
 .desserts-card {
     background-color: #f9f9f9;
     border-radius: 10px;
@@ -80,7 +80,6 @@
     justify-content: space-between;
 }
 
-    /* desserts image */
 .desserts-image {
     width: 100%;
     height: 150px;
@@ -89,14 +88,13 @@
     margin-bottom: 1vh;
 }
 
-    /* desserts title */
-    .desserts-card h3 {
-      font-size: 1.2rem;
-      color: #333;
-      margin-bottom: 1vh;
-    }
 
-    /* desserts price */
+.desserts-card h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 1vh;
+}
+
 .desserts-price {
     font-size: 1rem;
     font-weight: bold;
@@ -105,7 +103,6 @@
     margin-bottom: 10px;
 }
 
-    /* desserts description */
 .desserts-description {
     font-size: 0.9rem;
     color: #666;
@@ -113,19 +110,14 @@
     text-align: left;
 }
 
-
-
-
-    /* Responsive Styles */
-
 @media (max-width: 1024px) {
     .desserts {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 768px) {
     .desserts {
-        grid-template-columns: 1fr; /* 1 column for mobile */
+        grid-template-columns: 1fr;
     }
 }

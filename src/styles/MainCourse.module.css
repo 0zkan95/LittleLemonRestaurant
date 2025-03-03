@@ -16,7 +16,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 70rem;
+  width: 100vw;
   padding: 0rem 1rem;
   margin-top: 3rem;
 }
@@ -113,8 +113,6 @@
   margin-bottom: 2vh;
   text-align: left;
 }
-
-/* Order button */
 
 
 /* Responsive Styles */

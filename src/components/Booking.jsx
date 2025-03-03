@@ -1,7 +1,9 @@
 import React, { useReducer, useState } from "react";
 import { useEffect } from "react";
-import '../styles/Booking.css';
+import styles from '../styles/Booking.module.css';
 import { useNavigate } from "react-router-dom";
+import '@fontsource/karla';
+import '@fontsource/markazi-text';
 
 
 const avaibleTimesReducer = (state, action) => {
@@ -101,9 +103,9 @@ const Booking = () => {
 
 
   return (
-    <div className="booking-container">
+    <div className={`${styles["booking-container"]}`}>
       <h2>Book a Table</h2>
-      <form className="booking-form" onSubmit={handleSubmit}>
+      <form className={`${styles["booking-form"]}`} onSubmit={handleSubmit}>
         {/* Date Input */}
         <label>
           Date:
@@ -187,22 +189,22 @@ const Booking = () => {
         </label>
 
         {/* Submit Button */}
-        <button type="submit" className="submit-btn">
+        <button type="submit" className={`${styles["submit-btn"]}`}>
           Book My Table
         </button>
       </form>
 
       {/* Alternative Contact Buttons */}
-      <div className="contact-options">
+      <div className={`${styles["contact-options"]}`}>
         <button
-          className="call-btn"
+          className={`${styles["call-btn"]}`}
           onClick={() => alert("Please call us at +1-234-567-890!")}
         >
          <i className="fas fa-phone-alt"></i>
           Prefer to Call
         </button>
         <button
-          className="email-btn"
+          className={`${styles["email-btn"]}`}
           onClick={() => alert("Email us at bookings@example.com!")}
         >
           <i className="fas fa-envelope"></i>

@@ -1,4 +1,5 @@
 .booking-container {
+  font-family: 'Karla', sans-serif;
   max-width: 600px;
   margin: 20px auto;
   padding: 20px;
@@ -9,8 +10,9 @@
 }
 
 h2 {
+  font-family: 'Markazi Text', sans-serif;
   margin-bottom: 20px;
-  font-size: 2rem;
+  font-size: 3rem;
   color: #f4ce14;
 }
 
@@ -44,18 +46,18 @@ textarea {
 
 .submit-btn {
   font-size: 1rem;
-  background-color: #f4ce14;
+  border: 1px solid #f4ce14;
+  background-color: transparent;
   color: #000;
   font-weight: bold;
   padding: 10px 20px;
-  border: none;
   border-radius: 10px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .submit-btn:hover {
-  background-color: #495e57;
+  background-color: #f4ce14;
   color: #fff;
 }
 
@@ -90,7 +92,7 @@ textarea {
 .email-btn {
   background-color: transparent;
   color: #000;
-  border: 2px solid #f4ce14;
+  border: 1px solid #f4ce14;
   font-weight: bold;
   padding: 10px 20px;
   border-radius: 5px;

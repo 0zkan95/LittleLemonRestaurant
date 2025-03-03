@@ -1,6 +1,11 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "../styles/Logoutin.css";
+import styles from "../styles/Logoutin.module.css";
+import '@fontsource/karla';
+import '@fontsource/markazi-text';
+
+
+
 
 const Logoutin = ({ setUser }) => {
     const [credentials, setCredentials] = useState({
@@ -29,10 +34,10 @@ const Logoutin = ({ setUser }) => {
     };
 
     return (
-        <div className="login-container">
+        <div className={`${styles["login-container"]}`}>
             <h2>Login</h2>
-            <form className="login-form" onSubmit={(e) => e.preventDefault()}>
-                <div className="form-group">
+            <form className={`${styles["login-form"]}`} onSubmit={(e) => e.preventDefault()}>
+                <div className={`${styles["form-group"]}`}>
                     <label>Email</label>
                     <input
                         type="text"
@@ -43,7 +48,7 @@ const Logoutin = ({ setUser }) => {
                         required
                     />
                 </div>
-                <div className="form-group">
+                <div className={`${styles["form-group"]}`}>
                     <label>Password</label>
                     <input
                         type="password"
@@ -55,13 +60,21 @@ const Logoutin = ({ setUser }) => {
                     />
                 </div>
                 {error && <p className="error-message">{error}</p>}
-                <button type="button" className="login-button" onClick={handleLogin}>
+                <button 
+                    type="button" 
+                    className={`${styles["login-button"]}`} 
+                    onClick={handleLogin}
+                >
                     Login
                 </button>
-                <a href="/forgot-password" className="forgot-password-link">
+                <a href="/forgot-password" className={`${styles["forgot-password-link"]}`}>
                     Forget Password?
                 </a>
-                <button onClick={() => navigate("/signup")} type="button" className="signup-button">
+                <button 
+                    onClick={() => navigate("/signup")} 
+                    type="button" 
+                    className={`${styles["signup-button"]}`}
+                >
                     Sign Up
                 </button>
             </form>

@@ -1,5 +1,6 @@
 /* Login Container */
 .login-container {
+    font-family: 'Karla', sans-serif;
     width: 100%;
     max-width: 400px;
     margin: 50px auto;
@@ -11,6 +12,10 @@
     font-family: Arial, sans-serif;
 }
 
+.login-container h2{
+    font-family: 'Markazi Text', sans-serif;
+    font-size: 3rem;
+}
 /* Form Styling */
 .login-form {
     display: flex;
@@ -53,15 +58,28 @@ button {
 }
 
 .login-button {
+    color: #000;
+    background-color: transparent;
+    border: 1px solid #f4ce14;
+    border-radius: 10px;
+
+}
+
+.login-button:hover {
+    color: #fff;
     background-color: #f4ce14;
 }
 
 .signup-button {
-    background-color: #495e57;
+    color: #000;
+    background-color: transparent;
+    border: 1px solid #f4ce14;
+    border-radius: 10px;
 }
 
-button:hover {
-    opacity: 0.9;
+.signup-button:hover {
+    color: #fff;
+    background-color: #f4ce14;
 }
 
 /* Forgot Password Link */

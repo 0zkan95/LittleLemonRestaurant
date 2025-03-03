@@ -1,7 +1,6 @@
-/* Main container for all drinks */
-
 
 .drinks-container {
+  font-family: 'Karla', sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15,13 +14,14 @@
   justify-content: space-between;
   align-items: center;
   width: 100vw;
-  max-width: 950px;
+  padding: 0rem 1rem;
   margin-bottom: 5px;
 }
 
 #drinks-heading {
-  font-size: 2rem;
-  color: #495e57;
+  font-family: 'Markazi Text', sans-serif;
+  font-size: 3rem;
+  color: #f4ce14;
 }
 
 .drinks-button {

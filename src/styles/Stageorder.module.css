@@ -198,8 +198,13 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .order-container {
+    .ordercontainer {
         flex-direction: column;
+        padding: 0.5rem;
+    }
+    .order-meals-con{
+        width: 90vw;
+        padding: 0.5rem;
     }
 
     .meals-grid {
@@ -209,5 +214,9 @@
     .progress-container {
         border-left: none;
         padding: 10px;
+    }
+
+    .seco{
+        border-left: none;
     }
 }

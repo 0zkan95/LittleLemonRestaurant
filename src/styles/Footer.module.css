@@ -1,5 +1,6 @@
-/* General Styles */
+
 .container {
+    font-family: 'Karla', sans-serif;
     display: grid;
     grid-template-columns: repeat(4, 4fr);
     grid-gap: 20px; /* Space between rows */
@@ -22,6 +23,10 @@
 .doormat {
     display: flex;
     flex-direction: column;
+}
+.doormat h3{
+    font-family: 'Markazi Text', sans-serif;
+    font-size: 1.5rem;
 }
 
 .doormat ul {
@@ -52,8 +57,9 @@
 }
 
 .contact h3{
+    font-family: 'Markazi Text', sans-serif;
     font-weight: 700;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     margin-bottom: 1rem;
 }
 
@@ -84,7 +90,8 @@
 }
 
 .social h3{
-    font-size: 1.4rem;
+    font-family: 'Markazi Text', sans-serif;
+    font-size: 1.5rem;
     font-weight: bold;
     margin-bottom: 1rem;
 }

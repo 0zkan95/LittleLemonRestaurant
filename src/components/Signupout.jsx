@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import '../styles/Signupout.css';
+import styles from '../styles/Signupout.module.css';
+import '@fontsource/karla';
+import '@fontsource/markazi-text';
 
 
 
@@ -65,8 +67,8 @@ const SignUp = () => {
     };
 
     return (
-        <div className="signup-container">
-            <form className="signup" onSubmit={handleSubmit}>
+        <div className={`${styles["signup-container"]}`}>
+            <form className={styles.signup} onSubmit={handleSubmit}>
                 <h2>Sign Up</h2>
 
                 <label>Name:</label>
@@ -87,7 +89,7 @@ const SignUp = () => {
                     onChange={handleChange}
                     placeholder="Enter your surname"
                 />
-                {errors.surname && <p className="error">{errors.surname}</p>}
+                {errors.surname && <p className={styles.error}>{errors.surname}</p>}
 
                 <label>Phone:</label>
                 <input
@@ -97,7 +99,7 @@ const SignUp = () => {
                     onChange={handleChange}
                     placeholder="Enter your phone number"
                 />
-                {errors.phone && <p className="error">{errors.phone}</p>}
+                {errors.phone && <p className={styles.error}>{errors.phone}</p>}
 
                 <label>Email:</label>
                 <input
@@ -107,7 +109,7 @@ const SignUp = () => {
                     onChange={handleChange}
                     placeholder="Enter your email"
                 />
-                {errors.email && <p className="error">{errors.email}</p>}
+                {errors.email && <p className={styles.error}>{errors.email}</p>}
 
                 <label>Address:</label>
                 <input
@@ -117,7 +119,7 @@ const SignUp = () => {
                     onChange={handleChange}
                     placeholder="Enter your address"
                 />
-                {errors.address && <p className="error">{errors.address}</p>}
+                {errors.address && <p className={styles.error}>{errors.address}</p>}
 
                 <label>Password:</label>
                 <input
@@ -127,9 +129,9 @@ const SignUp = () => {
                     onChange={handleChange}
                     placeholder="Create a password"
                 />
-                {errors.password && <p className="error">{errors.password}</p>}
+                {errors.password && <p className={styles.error}>{errors.password}</p>}
 
-                <button id="register" type="submit">Register</button>
+                <button id={styles.register} type="submit">Register</button>
             </form>
         </div>
     );
