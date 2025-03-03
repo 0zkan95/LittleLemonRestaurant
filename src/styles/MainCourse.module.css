@@ -14,9 +14,9 @@
 .mains-header {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  width: 100vw;
+  width: 90vw;
   padding: 0rem 1rem;
   margin-top: 3rem;
 }
